@@ -1,5 +1,6 @@
 package com.android.cleanarchitecuresample.di
 
+import com.android.cleanarchitecuresample.data.SampleApiService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -45,6 +46,12 @@ class NetworkModule {
         return GsonBuilder()
             .setLenient()
             .create()
+    }
+
+    @Singleton
+    @Provides
+    fun provideApiService(retrofit: Retrofit) : SampleApiService{
+        return retrofit.create(SampleApiService::class.java)
     }
 
 
