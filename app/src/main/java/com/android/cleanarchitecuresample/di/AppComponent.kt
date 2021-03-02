@@ -2,6 +2,7 @@ package com.android.cleanarchitecuresample.di
 
 import android.app.Application
 import com.android.cleanarchitecuresample.ApplicationClass
+import com.android.cleanarchitecuresample.di.viewmodel.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -12,7 +13,7 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [(AndroidInjectionModule::class), (AndroidSupportInjectionModule::class),
-    (AppModule::class),(DataModule::class),(ActivityBindingModule::class)])
+    (AppModule::class),(DataModule::class),(ViewModelModule::class),(ActivityBindingModule::class)])
 interface AppComponent : AndroidInjector<ApplicationClass> {
 
     @Component.Builder
