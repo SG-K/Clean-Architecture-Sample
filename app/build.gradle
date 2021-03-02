@@ -1,9 +1,7 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-    id 'kotlin-kapt'
-}
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
 
 android {
     compileSdkVersion 30
@@ -51,7 +49,7 @@ dependencies {
     /* Dagger2 for DI */
     implementation "com.google.dagger:dagger-android:2.17"
     implementation "com.google.dagger:dagger-android-support:2.17"
-    kapt "com.google.dagger:dagger-compiler:2.27"
+    kapt "com.google.dagger:dagger-compiler:2.17"
     kapt "com.google.dagger:dagger-android-processor:2.17"
 
     /* Retrofit & Gson for network requests */
