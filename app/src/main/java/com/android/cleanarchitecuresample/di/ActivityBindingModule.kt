@@ -8,8 +8,8 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class ActivityBindingModule {
 
-//    @ActivityScoped
-//    @ContributesAndroidInjector
-//    abstract fun provideMainActivity(): MainActivity
+    @ActivityScoped
+    @ContributesAndroidInjector
+    abstract fun provideMainActivity(): MainActivity
 
 }

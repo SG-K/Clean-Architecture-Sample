@@ -5,12 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.android.cleanarchitecuresample.sample.SampleViewmodel
 import java.lang.IllegalStateException
+import javax.inject.Inject
+import javax.inject.Provider
+import javax.inject.Singleton
 
-class ViewModelFactory constructor(val sampleViewmodel: SampleViewmodel): ViewModelProvider.Factory {
+@Singleton
+class ViewModelFactory @Inject constructor(private val viewModels: MutableMap<Class<out ViewModel>,
+        @JvmSuppressWildcards Provider<ViewModel>>): ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T =
-        if(modelClass == SampleViewmodel::class.java){
-            sampleViewmodel as T
-        }else{
-            throw  IllegalStateException("Unknown entity")
-        }
+        viewModels[modelClass]?.get() as T
 }
