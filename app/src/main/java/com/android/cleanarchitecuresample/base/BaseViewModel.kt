@@ -1,4 +1,4 @@
-package com.android.cleanarchitecuresample.base.usecasetypes
+package com.android.cleanarchitecuresample.base
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.CoroutineScope

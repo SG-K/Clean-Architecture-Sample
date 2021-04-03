@@ -14,7 +14,6 @@ import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import com.android.cleanarchitecuresample.R
-import com.android.cleanarchitecuresample.base.usecasetypes.BaseViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

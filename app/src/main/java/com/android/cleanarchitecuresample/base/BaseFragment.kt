@@ -15,7 +15,6 @@ import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 import com.android.cleanarchitecuresample.R
-import com.android.cleanarchitecuresample.base.usecasetypes.BaseViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
